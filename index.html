@@ -3,8 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<!-- displays site properly based on user's device -->
-
 		<link
 			rel="icon"
 			type="image/png"
@@ -12,27 +10,22 @@
 			href="./images/favicon-32x32.png"
 		/>
 		<link rel="stylesheet" href="./assets/css/index.css" />
-		<link rel="stylesheet" href="./assets/css/responsive.css" />
 
 		<title>Frontend Mentor | E-commerce product page</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
 	</head>
 	<body>
 		<header class="page-header">
 			<nav class="page-navbar">
+				<div class="menu-backdrop"></div>
 				<div class="navbar-content">
+					<button class="hamburger-menu">
+						<img src="./images/icon-menu.svg" alt="icon" />
+					</button>
 					<div><img src="./images/logo.svg" alt="logo" /></div>
 					<ul>
+						<button class="close-menu-btn close">
+							<img src="./images/icon-close.svg" alt="" srcset="" />
+						</button>
 						<li><a href="#">Collections</a></li>
 						<li><a href="#">Men</a></li>
 						<li><a href="#">Women</a></li>
@@ -41,16 +34,8 @@
 					</ul>
 				</div>
 				<div class="navbar-controls">
-					<button>
+					<button id="cart-btn">
 						<img src="./images/icon-cart.svg" alt="shopping cart" />
-						<div class="cart-container">
-							<div class="cart-header">
-								<h3>Cart</h3>
-							</div>
-							<div class="cart-body">
-								<h3>Your cart is empty.</h3>
-							</div>
-						</div>
 					</button>
 					<div class="user-avatar">
 						<img src="./images/image-avatar.png" alt="avatar" />
@@ -59,25 +44,29 @@
 			</nav>
 			<section class="cart-item-wrapper">
 				<section class="cart-item-container">
-					<div class="product-carousel-container">
-						<div class="product-carousel">
-							<div class="product-carousel-items">
-								<div class="product-carousel-item">
-									<img src="./images/image-product-1.jpg" alt="" />
-								</div>
-								<div class="product-carousel-item">
-									<img src="./images/image-product-2.jpg" alt="" />
-								</div>
-								<div class="product-carousel-item">
-									<img src="./images/image-product-3.jpg" alt="" />
-								</div>
-								<div class="product-carousel-item">
-									<img src="./images/image-product-4.jpg" alt="" />
-								</div>
+					<div class="product-carousel">
+						<button class="prev-image">
+							<img src="./images/icon-previous.svg" alt="arrow left" />
+						</button>
+						<div class="product-carousel-items">
+							<div class="product-carousel-item current">
+								<img src="./images/image-product-1.jpg" alt="" />
+							</div>
+							<div class="product-carousel-item">
+								<img src="./images/image-product-2.jpg" alt="" />
+							</div>
+							<div class="product-carousel-item">
+								<img src="./images/image-product-3.jpg" alt="" />
+							</div>
+							<div class="product-carousel-item">
+								<img src="./images/image-product-4.jpg" alt="" />
 							</div>
 						</div>
+						<button class="next-image">
+							<img src="./images/icon-next.svg" alt="arrow left" />
+						</button>
 						<div class="product-thumbnail">
-							<div class="product-thumbnail-item">
+							<div class="product-thumbnail-item current">
 								<img src="./images/image-product-1-thumbnail.jpg" alt="" />
 							</div>
 							<div class="product-thumbnail-item">
@@ -94,16 +83,18 @@
 					<div class="product-info">
 						<h1>Sneaker company</h1>
 						<h2 class="subtitle">Fall Limited Edition Sneakers</h2>
-						<p>
+						<p class="product-desc">
 							These low-profile sneakers are your perfect casual wear companion.
 							Featuring a durable rubber outer sole, they’ll withstand
 							everything the weather can offer.
 						</p>
-						<div class="price-container">
-							<h2 class="price">$125.00</h2>
-							<p class="discount">50%</p>
+						<div class="pricing">
+							<div class="price-container">
+								<h2 class="price">$125.00</h2>
+								<p class="discount">50%</p>
+							</div>
+							<p class="old-price">$250.00</p>
 						</div>
-						<p class="old-price">$250.00</p>
 						<div class="product-button">
 							<div class="quantity-control">
 								<button class="minus-one">
@@ -135,5 +126,6 @@
 				>Frontend Mentor</a
 			>. Coded by <a href="#">Daniel Omehe</a>.
 		</div>
+		<script src="./assets/js/index.js"></script>
 	</body>
 </html>
